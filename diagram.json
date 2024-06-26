@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Everaldo “Barreto Gomes Semedo”",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -85.8, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": 160,
+      "left": -32.8,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-48", "v-76.6", "h0" ] ],
+    [ "lcd1:SCL", "uno:A5", "blue", [ "h-48", "v0.3", "h19.2", "v-67.2", "h326.4" ] ],
+    [ "uno:GND.2", "lcd1:GND", "black", [ "v19.1", "h-255.3", "v67.2" ] ],
+    [ "uno:5V", "lcd1:VCC", "red", [ "v9.5", "h-245.8", "v86.4" ] ]
+  ],
+  "dependencies": {}
+}
